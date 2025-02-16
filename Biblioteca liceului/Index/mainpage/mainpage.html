@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BIblioteca Liceului Teoretic Mihai Eminescu</title>
+    <link rel="stylesheet" href="mainpage.css">
+    <link rel="icon" href="../../Static-materials/logo-eminescu.png">
+<body>
+    <body>
+        <header class="biblioteca-meniu"> 
+            <ul>
+            <li><a href="../../Index/map/map.html"><img src="../../Static-materials/logo-eminescu.png" alt="logo"></a></li>
+            <li><a href="../../Index/mainpage/mainpage.html">Home</a></li>
+            <li><a href="../../Index/carti/carti.html">Cărți</a></li>
+            <li><a href="../../Index/evenimente/evenimente.html">Evenimente</a></li>
+            <li><a href="../../Index/concursuri/">Concursuri</a></li>
+            <li><a href="../../Index/biografie/biografie.html">Biografie</a></li>
+            <li><a href="../../Index/ziar/ziar.html">Ziarul liceului</a></li>
+            </ul>
+        </header>
+    
+        <section class="main-section">
+            <div class="overlay"></div>
+            <h3> Biblioteca Liceului Teoretic "Mihai Eminescu"</h3>
+        </section>
+        
+        <section class="exploreaza">
+            <div class="overlay2"></div>
+            <div class="exploreaza-section">
+            <div class="exploreaza-header">
+                <h3>Explorează biblioteca</h3>
+            </div>
+            <div class="exploreaza-gallery">
+                <ul>
+                    <li><a href="../../images/home/home2.webp"><img src="../../Static-materials/mainpage/exploreaza1.jpg" alt="Transfăgărășan"></a></li>
+                    <li><a href="turism-page.html"><img src="../../Static-materials/mainpage/exploreaza2.jpg" alt="Luminarea Recunoștiinței"></a></li>
+                    <li><a href="turism-page.html"><img src="../../Static-materials/mainpage/exploreaza3.jpg" alt="Mănăstirea Țipova"></a></li>
+                    <li><a href="turism-page.html"><img src="../../Static-materials/mainpage/exploreaza4.jpg" alt="Codrii"></a></li>
+                    <li><a href="turism-page.html" target="_blank"><img src="../../Static-materials/mainpage/exploreaza5.jpg" alt="cujusna"></a></li>
+                    <li><a href="turism-page.html" target="_blank"><img src="../../Static-materials/mainpage/exploreaza1.jpg" alt="milestii-mici"></a></li>
+                    <li><a href="../../images/home/home2.webp"><img src="../../Static-materials/mainpage/exploreaza1.jpg" alt="Transfăgărășan"></a></li>
+                    <li><a href="turism-page.html"><img src="../../Static-materials/mainpage/exploreaza2.jpg" alt="Luminarea Recunoștiinței"></a></li>
+                    <li><a href="turism-page.html"><img src="../../Static-materials/mainpage/exploreaza3.jpg" alt="Mănăstirea Țipova"></a></li>
+                    <li><a href="turism-page.html"><img src="../../Static-materials/mainpage/exploreaza4.jpg" alt="Codrii"></a></li>
+                </ul>
+            </div>
+        </div>
+        </section>
+    
+        <section class="section">
+            <div class="overlay3"></div>
+            <div class="option">
+                <h2>"Vrei un prieten bun, fidel și înțelept? Cumpară-ți o carte!"</h2>
+                <div class="travel-section-img">
+                    <a href="#"><h6>Aurilian Silvestru</h6></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="comments-section">
+            <h2></h2>  <!-- in caz ca vom dori sa adaugam un titlu pentru acest block-->
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <img src="../../../images/users/woman1.jpg" alt="User 1" class="profile-pic">
+                    <span class="nickname">username2025</span>
+                </div>
+                <p class="comment-text">Cultura românească este un amestec fascinant de influențe istorice, cu tradiții populare vibrante, muzică folclorică și artă.</p>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <img src="../../../images/users/man1.jpg" alt="User 2" class="profile-pic">
+                    <span class="nickname">valeriu_2025</span>
+                </div>
+                <p class="comment-text">Gastronomia românească este renumită pentru preparate delicioase precum mămăligă, sarmale și cozonac, fiecare regiune având specialitățile sale unice.</p>
+            </div>
+            
+            <div class="comment">
+                <div class="comment-header">
+                    <img src="../../../images/users/woman2.jpg" alt="User 3" class="profile-pic">
+                    <span class="nickname">carturesti_y</span>
+                </div>
+                <p class="comment-text"> România găzduiește locuri deosebite, precum Castelul Peleș, Delta Dunării, și satele tradiționale din Maramureș, fiecare având propria sa poveste de spus.</p>
+            </div>
+        </section>
+        
+
+        <footer>
+            <ol>
+                <li><a href="#"><img src="../../Static-materials/instagram.png" alt="Instagram"></a></li>
+                <li><a href="#"><img src="../../Static-materials/facebook.png" alt="Facebook"></a></li>
+            </ol>
+        </footer>
+
+        <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.querySelector('.tours-gallery ul');
+    const images = slider.querySelectorAll('li');
+    const totalImages = images.length; 
+    let currentIndex = 0;
+
+    
+    images.forEach(image => {
+        const clone = image.cloneNode(true);
+        slider.appendChild(clone);
+    });
+
+    const moveSlider = () => {
+        currentIndex++;
+        slider.style.transition = 'transform 50s linear'; 
+        slider.style.transform = `translateX(-${currentIndex * 400}px)`; 
+
+        if (currentIndex === totalImages) {
+            setTimeout(() => {
+                slider.style.transition = 'none'; 
+                currentIndex = 0; 
+                slider.style.transform = `translateX(0)`; 
+                setTimeout(() => {
+                    slider.style.transition = 'transform 50s linear'; 
+                }, 50); 
+            }, 50000); 
+        }
+    };
+
+    setInterval(moveSlider, 50000); 
+});
+
+        </script>
+    </body>
+    
+</html>

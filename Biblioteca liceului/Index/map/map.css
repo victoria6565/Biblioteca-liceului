@@ -1,0 +1,36 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    text-align: center;
+}
+
+  .tooltip {
+    position: absolute;
+    pointer-events: none;
+    background-color: rgba(0, 0, 0, 0.75);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+#MD-AN:hover{
+    fill: #6B9080;
+    stroke: black;
+    stroke-width:0.2px;
+  }
+  path {
+    fill: #CCE3DE;
+    stroke: #6B9080;
+    stroke-width: 0,4px;
+  }
+  path:hover {
+    fill: #A4C3B2;
+    stroke: #6B9080;
+    stroke-width: 1.5px;
+    transition: fill 0.4s;
+  }
