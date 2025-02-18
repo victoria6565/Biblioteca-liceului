@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz Moldova</title>
+    <link rel="stylesheet" href="quizz.css">
+    <link rel="icon" href="../../Static-materials/logo-eminescu.png" type="#">
+    <style>
+        @media (max-width: 768px) {
+    .tour-section {
+        flex-direction: column;
+        height: auto;
+    }
+    .tour-info {
+        max-width: 100%;
+        padding-right: 0;
+    }
+    .gallery {
+        width: 100%;
+        grid-template-columns: 1fr;
+    }
+}
+    </style>
+</head>
+<body>
+    <!-- HEADER -->
+    <header class="biblioteca-meniu"> 
+        <ul>
+            <li><a href="../../Index/map/map.html"><img src="../../Static-materials/logo-eminescu.png" alt="logo"></a></li>
+            <li><a href="../../Index/mainpage/mainpage.html">Home</a></li>
+            <li><a href="../../Index/carti/carti.html">Literatură</a></li>
+            <li><a href="../../Index/evenimente/evenimente.html">Evenimente</a></li>
+            <li><a href="../../Index/quizz/quizz.html">Quizz</a></li>
+        </ul>
+    </header>
+
+    <!-- Quizzz -->
+    <main>
+        <div class="quiz-container">
+            <h1>Știai că..</h1>
+            <div id="quiz"></div>
+            <button class="btn-submit" onclick="submitQuiz()">Trimite răspunsurile</button>
+            <button class="btn-try-again" onclick="tryAgain()" style="display: none;">Încercă din nou</button>
+            <div class="result" id="result"></div>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <ol>
+            <li><a href="#"><img src="../../Static-materials/instagram.png" alt="Instagram"></a></li>
+            <li><a href="#"><img src="../../Static-materials/facebook.png" alt="Facebook"></a></li>
+        </ol>
+    </footer>
+<script src="quizz.js"></script>
+</body>
+</html>
