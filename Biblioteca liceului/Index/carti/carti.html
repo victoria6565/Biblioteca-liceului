@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evenimente</title>
+    <title>Literatură</title>
     <link rel="stylesheet" href="carti.css">
     <link rel="icon" href="../../Static-materials/logo-eminescu.png" type="#">
 </head>
@@ -13,11 +13,8 @@
         <ul>
         <li><a href="../../Index/map/map.html"><img src="../../Static-materials/logo-eminescu.png" alt="logo"></a></li>
         <li><a href="../../Index/mainpage/mainpage.html">Home</a></li>
-        <li><a href="../../Index/carti/carti.html">Cărți</a></li>
+        <li><a href="../../Index/carti/carti.html">Literatură</a></li>
         <li><a href="../../Index/evenimente/evenimente.html">Evenimente</a></li>
-        <li><a href="../../Index/concursuri/">Concursuri</a></li>
-        <li><a href="../../Index/biografie/biografie.html">Biografie</a></li>
-        <li><a href="../../Index/ziar/ziar.html">Ziarul liceului</a></li>
         </ul>
     </header>
     <div class="t1">
@@ -32,6 +29,28 @@
                     <div class="gallery-item"><img src="../../Static-materials/carti/eminescu/eminescu1.jpg" alt="Cititor1"></div>
                     <div class="gallery-item"><img src="../../Static-materials/carti/eminescu/eminescu2.jpg" alt="Cititor2"></div>
                     <div class="gallery-item"><img src="../../Static-materials/carti/eminescu/eminescu3.jpg" alt="Cititor3"></div>
+                </div>
+                <div class="gallery">
+                    <!-- Butonul cu imagine -->
+                    <button class="carousel-button">
+                        <img src="../../Static-materials/arrow-right.png" alt="Săgeată dreapta">
+                    </button>
+            </section>
+        </div>
+    </div>
+    <div class="t2">
+        <div class="overlay">
+            <section class="tour-section">
+                <div class="tour-info">
+                    <h1>Liviu Rebreanu</h1>
+                    <p>Liviu Rebreanu a fost un mare scriitor român, cunoscut în special pentru romanele sale care explorează teme de profunzime psihologică și socială. Una dintre cele mai importante lucrări ale sale este „Ion”, un roman ce descrie viața unui țăran din Transilvania, prins între dorința de a obține pământ și imposibilitatea de a-și împlini visurile din cauza constrângerilor sociale și economice. Rebreanu este apreciat pentru realismul său remarcabil și pentru modul în care abordează conflictele interioare ale personajelor sale, creând astfel o frescă a societății românești din perioada interbelică.</p>
+                    <button class="tour-button"><a href="rebreanu.html">vezi opere</a></button>
+                </div>
+                <div class="gallery">
+                    <div class="gallery-item"><img src="../../Static-materials/carti/rebreanu/rebreanu1.jpg" alt="Cititor1"></div>
+                    <div class="gallery-item"><img src="../../Static-materials/carti/rebreanu/rebreanu2.jpg" alt="Cititor2"></div>
+                    <div class="gallery-item"><img src="../../Static-materials/carti/rebreanu/rebreanu3.jpg" alt="Cititor3"></div>
+                    <div class="gallery-item"><img src="../../Static-materials/carti/rebreanu/rebreanu4.jpg" alt="Cititor3"></div>
                 </div>
                 <div class="gallery">
                     <!-- Butonul cu imagine -->
@@ -63,6 +82,13 @@
             "../../Static-materials/carti/eminescu/eminescu1.jpg",
             "../../Static-materials/carti/eminescu/eminescu2.jpg",
             "../../Static-materials/carti/eminescu/eminescu3.jpg",
+        ];
+    } else if (section.closest('.t2')) {
+        images = [
+            "../../Static-materials/carti/rebreanu/rebreanu1.jpg",
+            "../../Static-materials/carti/rebreanu/rebreanu2.jpg",
+            "../../Static-materials/carti/rebreanu/rebreanu3.jpg",
+            "../../Static-materials/carti/rebreanu/rebreanu4.jpg",
         ];
     }
         let currentIndex = 0; // Indexul imaginii curente pentru această secțiune
