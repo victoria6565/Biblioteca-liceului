@@ -132,12 +132,12 @@
     <script>
         document.addEventListener("DOMContentLoaded", function() {
   document.querySelectorAll('.tour-section').forEach(section => {
-    const gallery = section.querySelector('.gallery'); // Selectează galeria din secțiunea curentă
-    const button = section.querySelector('.carousel-button'); // Selectează butonul din secțiunea curentă
+    const gallery = section.querySelector('.gallery');
+    const button = section.querySelector('.carousel-button');
 
-    if (!gallery || !button) return; // Dacă nu există galerie sau buton, ieșim
+    if (!gallery || !button) return;
 
-    // Definim imaginile pentru fiecare secțiune în funcție de clasa părinte
+    
     let images = [];
     if (section.closest('.t2')) {
         images = [
@@ -199,12 +199,10 @@
 }
 
 
-    let currentIndex = 0; // Indexul imaginii curente pentru această secțiune
+    let currentIndex = 0;
 
     function updateGallery() {
-        gallery.innerHTML = ''; // Golește conținutul galeriei
-
-        // Afișează două imagini noi din lista `images`
+        gallery.innerHTML = '';
         for (let i = 0; i < 2; i++) {
             const imgIndex = (currentIndex + i) % images.length;
 
@@ -218,14 +216,11 @@
             galleryItem.appendChild(imgElement);
             gallery.appendChild(galleryItem);
         }
-
-        // Actualizează indexul curent pentru următorul set de imagini
         currentIndex = (currentIndex + 2) % images.length;
     }
 
     button.addEventListener('click', updateGallery);
 
-    // Inițializăm galeria cu primele imagini
     updateGallery();
 }); });
     </script>
